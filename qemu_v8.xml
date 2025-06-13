@@ -4,7 +4,7 @@
         <remote name="u-boot"   fetch="https://source.denx.de/u-boot" />
 
         <include name="common.xml" />
-        <project path="build"                name="OP-TEE/build.git">
+        <project path="build"                name="raymo200915/optee_build.git" revision="dt_overlay_handoff">
                 <linkfile src="qemu_v8.mk" dest="build/Makefile" />
         </project>
 
@@ -12,9 +12,9 @@
         <project path="optee_rust"           name="apache/incubator-teaclave-trustzone-sdk.git"            revision="e67293c0d2f8168f47586be2e5b1a4231c8bd8e9" />
         <project path="qemu"                 name="qemu/qemu.git"                         revision="refs/tags/v10.0.0" clone-depth="1" />
         <project path="hafnium"              name="TF-Hafnium/hafnium.git"                   revision="refs/tags/v2.12" clone-depth="1" />
-        <project path="trusted-firmware-a"   name="TrustedFirmware-A/trusted-firmware-a.git"           revision="refs/tags/v2.13-rc0" clone-depth="1" />
+        <project path="trusted-firmware-a"   name="raymo200915/arm-trusted-firmware.git" revision="dt_overlay_handoff" clone-depth="1" />
         <project path="mbedtls"              name="Mbed-TLS/mbedtls.git"                  revision="refs/tags/mbedtls-3.6.0" clone-depth="1" />
-        <project path="u-boot"               name="u-boot.git"                            revision="refs/tags/v2025.07-rc1" remote="u-boot" clone-depth="1" />
+        <project path="u-boot"               name="raymo200915/u-boot-github.git"                            revision="bloblist_dt_overlay" clone-depth="1" />
         <project path="xen"                  name="xen-project/xen.git"                   revision="refs/tags/RELEASE-4.20.0" clone-depth="1" />
         <project path="SCP-firmware"         name="linaro-swg/SCP-firmware.git"             revision="refs/tags/v2.16.0" clone-depth="1" />
 
