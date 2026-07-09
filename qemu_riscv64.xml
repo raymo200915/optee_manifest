@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+        <remote name="denx-u-boot" fetch="https://source.denx.de/u-boot" />
+        <remote name="raymo200915-github" fetch="https://github.com/raymo200915" />
+        <remote name="rise-gitlab" fetch="https://gitlab.com/riseproject" />
+
+        <include name="common.xml" />
+
+        <!-- Replace common.xml defaults with the current RISC-V working repos -->
+        <remove-project path="optee_os"      name="OP-TEE/optee_os.git" />
+        <remove-project path="linux"         name="linaro-swg/linux.git" />
+
+        <project path="build"                name="optee_build.git"                 remote="raymo200915-github" revision="rise">
+                <linkfile src="qemu_riscv64.mk" dest="build/Makefile" />
+        </project>
+        <project path="optee_os"             name="optee_os.git"                    remote="raymo200915-github" revision="rise" />
+        <project path="linux"                name="torvalds/linux.git"              remote="github"             revision="refs/tags/v6.19-rc2" clone-depth="1" />
+
+        <!-- RISC-V QEMU platform dependencies -->
+        <project path="opensbi"              name="riscv-software-src/opensbi.git" remote="github"             revision="refs/tags/v1.8" clone-depth="1" />
+        <project path="qemu"                 name="qemu/qemu.git"                   revision="refs/tags/v10.0.0" clone-depth="1" />
+        <project path="patches_qemu_riscv64" name="optee_build_qemu_riscv64_patches.git" remote="raymo200915-github" revision="main" />
+        <project path="u-boot"               name="u-boot.git"                      remote="denx-u-boot"        revision="refs/tags/v2026.07" clone-depth="1" />
+</manifest>
