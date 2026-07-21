@@ -19,8 +19,8 @@
         <project path="linux"                name="torvalds/linux.git"              remote="github"             revision="refs/tags/v6.19-rc2" clone-depth="1" />
 
         <!-- RISC-V QEMU platform dependencies -->
-        <project path="opensbi"              name="riscv-software-src/opensbi.git" remote="github"             revision="refs/tags/v1.8" clone-depth="1" />
+        <project path="opensbi"              name="opensbi_riscv.git"               remote="raymo200915-github" revision="rp022-m2" clone-depth="1" />
         <project path="qemu"                 name="qemu/qemu.git"                   revision="refs/tags/v10.0.0" clone-depth="1" />
-        <project path="patches_qemu_riscv64" name="optee_build_qemu_riscv64_patches.git" remote="raymo200915-github" revision="main" />
-        <project path="u-boot"               name="u-boot.git"                      remote="denx-u-boot"        revision="refs/tags/v2026.07" clone-depth="1" />
+        <project path="patches_qemu_riscv64" name="optee_build_qemu_riscv64_patches.git" remote="raymo200915-github" revision="rp022-m2-debug-uboot-linux" />
+        <project path="u-boot"               name="u-boot.git"                      remote="denx-u-boot"        revision="refs/tags/v2025.01-rc5" clone-depth="1" />
 </manifest>
